@@ -1,0 +1,24 @@
+# 1. Virtual Environment
+asp/
+
+# 2. Datasets & Raw Audio
+data/
+test_samples/
+
+# 3. Machine Learning Models & Extracted Features
+*.h5
+*.pkl
+
+# 4. React Frontend Dependencies
+frontend-react/node_modules/
+frontend-react/dist/
+frontend-react/.eslintcache
+
+# 5. Python Cache
+__pycache__/
+*.py[cod]
+
+# 6. Environment Variables & OS Files
+.env
+.DS_Store
+Thumbs.db
