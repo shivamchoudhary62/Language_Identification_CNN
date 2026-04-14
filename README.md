@@ -30,7 +30,7 @@ An end-to-end Machine Learning pipeline designed for real-time Automatic Languag
 
 ## Project Structure
 
-```text
+
 ASP_PROJECT/
 ├── frontend-react/           # React dashboard UI and components
 ├── test_samples/             # Sample .mp3 and .wav files for testing
@@ -44,7 +44,7 @@ ASP_PROJECT/
 
 ## Installation & Setup
 
-1. Clone the Repository & Setup Backend
+### 1. Clone the Repository & Setup Backend
 
     1.1 Open your terminal and clone the repository:
 
@@ -66,27 +66,27 @@ ASP_PROJECT/
         pip install fastapi uvicorn librosa noisereduce tensorflow pandas scikit-learn matplotlib
 
 
-2. Generate the Deep Learning Models
+### 2. Generate the Deep Learning Models
 Run the following scripts in order to download the data, extract the spectrograms, and train the AI brain:
 
-    # 2.1 Download the audio dataset (Requires internet connection)
+    2.1 Download the audio dataset (Requires internet connection)
     python download_real_data.py
 
-    # 2.2 Extract features and apply noise reduction (May take a few minutes)
+    2.2 Extract features and apply noise reduction (May take a few minutes)
     python extract_cnn.py
 
-    # 2.3 Train the CNN and save the .h5 model
+    2.3 Train the CNN and save the .h5 model
     python train_cnn.py
 
-3. Setup the Frontend
+### 3. Setup the Frontend
 Open a second terminal window, navigate to the React folder, and install the Node dependencies:
 
     cd frontend-react
     npm install
 
-################################################
-Running the Application
-################################################
+---------------------------------------
+### 4. Running the Application
+---------------------------------------
 
 To use the application, you must run both the backend server and the frontend development server simultaneously.
 
@@ -103,7 +103,7 @@ To use the application, you must run both the backend server and the frontend de
     (The dashboard will be available at http://localhost:5173)
 
 ------------------------------------------
-Testing the Model
+### 5. Testing the Model
 ------------------------------------------
 
 Once both servers are running, open your browser to the frontend URL. You can test the system in two ways:
@@ -114,6 +114,7 @@ Live Mic: Click "Start Live Mic," speak clearly for 3-5 seconds in one of the su
 
 For best results, ensure a quiet background environment if not using pre-recorded studio audio.
 
+------------------------------------------------------------------------------------------------
 Developed by: 
 Students of Artificial Intelligence and Data Science at Gati Shakti Vishwavidyalaya (GSV)
 #Batch 2027
