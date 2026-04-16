@@ -61,9 +61,8 @@ async def predict_language(file: UploadFile = File(...)):
         if spectrogram is None:
             raise HTTPException(status_code=500, detail="Failed to extract Spectrogram.")
 
-        # --- NEW: Generate the Heatmap Image for the Frontend ---
         plt.figure(figsize=(7, 3))
-        # Use the standard 'magma' colormap for a professional look
+        
         librosa.display.specshow(spectrogram, sr=22050, x_axis='time', y_axis='mel', cmap='magma')
         plt.xlabel("Time (Seconds)", fontsize=10, color='#1e293b')
         plt.ylabel("Hz", fontsize=10, color='#1e293b')
@@ -73,7 +72,6 @@ async def predict_language(file: UploadFile = File(...)):
         plt.savefig(buf, format='png', bbox_inches='tight', pad_inches=0.1, transparent=True)
         plt.close()
         heatmap_base64 = base64.b64encode(buf.getvalue()).decode('utf-8')
-        # --------------------------------------------------------
 
         img_height, img_width = spectrogram.shape
         cnn_input = spectrogram.reshape(1, img_height, img_width, 1)
@@ -92,7 +90,7 @@ async def predict_language(file: UploadFile = File(...)):
             "predicted_language": predicted_language,
             "confidence": f"{confidence:.2f}%",
             "distribution": distribution,
-            "heatmap": heatmap_base64  # Send the image to React!
+            "heatmap": heatmap_base64
         }
     finally:
         if os.path.exists(temp_path):

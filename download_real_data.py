@@ -12,7 +12,7 @@ LANGUAGES = {
     "spanish": "es_419"
 }
 
-SAMPLES_PER_LANG = 400
+SAMPLES_PER_LANG = 400 #(400 clips per language you can change it if you want more clips)
 
 print("Initializing Real Human Speech Download (Google FLEURS)...")
 
