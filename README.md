@@ -63,7 +63,7 @@ ASP_PROJECT/
 
     1.3 Install the required Python dependencies:
 
-        pip install fastapi uvicorn librosa noisereduce tensorflow pandas scikit-learn matplotlib soundfile datasets
+        pip install fastapi uvicorn librosa noisereduce tensorflow pandas scikit-learn matplotlib soundfile datasets python-multipart
 
         pip install "datasets<2.20.0"
 
