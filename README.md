@@ -63,7 +63,9 @@ ASP_PROJECT/
 
     1.3 Install the required Python dependencies:
 
-        pip install fastapi uvicorn librosa noisereduce tensorflow pandas scikit-learn matplotlib
+        pip install fastapi uvicorn librosa noisereduce tensorflow pandas scikit-learn matplotlib soundfile datasets
+
+        pip install "datasets<2.20.0"
 
 
 ### 2. Generate the Deep Learning Models
@@ -80,7 +82,7 @@ Run the following scripts in order to download the data, extract the spectrogram
 
 ### 3. Setup the Frontend
 Open a second terminal window, navigate to the React folder, and install the Node dependencies:
-
+    
     cd frontend-react
     npm install
 
